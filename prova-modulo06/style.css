@@ -1,0 +1,254 @@
+/*                                                 Aula 06 - Atividade 06
+
+    - Crie um formulário simples com dois campos: "Nome de Usuário" e " Senha".
+    - Adicione dois botões: "Enviar" e "Limpar".
+
+    - Use Media Queries para garantir que o formulário se ajuste bem em diferentes tamanhos de tela (móvel, tablet, desktop).
+    - Em telas menores, o formulário deve ocupar toda a largura da tela, enquanto em telas maiores  deve ser centralizado com uma largura fixa.
+    
+    - Use o pseudo-elemento ::before para adicionar ícones decorativos antes dos campos "Nome de Usuário" e "Senha".
+    - Use o pseudo-elemento ::After para adicionar um efeito visual dos botões quando o mouse passar sobre eles(hover).
+
+    - Aplique bordas arredondadas aos campos e botões.
+    - Utilize sombras sutis para dar profundidade ao formulário.
+
+    Objetivo: Criar um formlário de cadastro e login responsivo. Além dissso, aplicar pseudo-elementos para aprimorar a aparência dos campos e botões do formulário. */
+
+@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Creepster&family=Eater&family=Fjalla+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Trocchi&display=swap');
+
+* {
+    font-family: "Oswald", sans-serif;
+}
+
+/* Resolução 2k (Coloquei essa resolução porque tenho um monitor de 2k e outro 1080p) */
+@media (max-width: 2560px) {
+    body {
+        height: 100vh;
+        background-color: rgba(1, 5, 26, 0.349);
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(135deg, rgba(0, 17, 255, 0.562) 0%, rgba(128, 0, 128, 0.863) 100%);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+        border-radius: 10px;
+        width: 800px;
+        height: 500px;
+        font-size: 20px;
+    }
+
+    .formulario form {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 60px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .usuario label::before {
+        content: "👨🏻‍💻";
+    }
+
+    .senha label::before {
+        content:"🔑";
+    }
+    
+    .usuario input {
+        border-style: solid;
+        border-radius: 5px;
+    }
+
+    .senha input {
+        border-style: solid;
+        border-radius: 5px;
+    }
+
+
+
+   .botoes button {
+    border-radius: 5px;
+    border-style: inset;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+    font-size: 15px;
+    padding: 3px;
+   }
+
+   .botoes button:hover::after {
+    left: 0;
+}
+
+.botoes button:hover {
+    color: yellow; 
+    background-color: #0056b3; 
+} 
+}
+
+/* Resolução 1080p */
+@media (min-width: 1920px) and (max-width: 2559px) {
+    body {
+        height: 100vh;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(135deg, rgba(0, 17, 255, 0.562) 0%, rgba(128, 0, 128, 0.863) 100%);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+        border-radius: 10px;
+        width: 800px;
+        height: 500px;
+        font-size: 20px;
+    }
+
+    .formulario form {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 60px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .usuario label::before {
+        content: "👨🏻‍💻";
+    }
+
+    .senha label::before {
+        content:"🔑";
+    }
+    
+    .usuario input {
+        border-style: solid;
+        border-radius: 5px;
+    }
+
+    .senha input {
+        border-style: solid;
+        border-radius: 5px;
+    }
+
+
+
+   .botoes button {
+    border-radius: 5px;
+    border-style: inset;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+    font-size: 15px;
+    padding: 3px;
+   }
+
+   .botoes button:hover::after {
+    left: 0;
+}
+
+.botoes button:hover {
+    color: yellow; 
+    background-color: #0056b3; 
+} 
+}
+
+
+/* Resolução 1024px */
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        height: 100vh;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(135deg, rgba(0, 17, 255, 0.562) 0%, rgba(128, 0, 128, 0.863) 100%);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+        border-radius: 10px;
+        width: 1100px;
+        height: 500px;
+        font-size: 20px;
+    }
+
+    .formulario form {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 60px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .usuario label::before {
+        content: "👨🏻‍💻";
+    }
+
+    .senha label::before {
+        content:"🔑";
+    }
+    
+    .usuario input {
+        border-style: solid;
+        border-radius: 5px;
+    }
+
+    .senha input {
+        border-style: solid;
+        border-radius: 5px;
+    }
+
+
+
+   .botoes button {
+    border-radius: 5px;
+    border-style: inset;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+    font-size: 15px;
+    padding: 3px;
+   }
+
+   .botoes button:hover::after {
+    left: 0;
+}
+
+.botoes button:hover {
+    color: yellow; 
+    background-color: #0056b3; 
+} 
+}

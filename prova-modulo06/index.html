@@ -1,0 +1,53 @@
+<!--                                            Prova - Módulo 06
+
+    - Crie um formulário simples com dois campos: "Nome de Usuário" e " Senha".
+    - Adicione dois botões: "Enviar" e "Limpar".
+
+    - Use Media Queries para garantir que o formulário se ajuste bem em diferentes tamanhos de tela (móvel, tablet, desktop).
+    - Em telas menores, o formulário deve ocupar toda a largura da tela, enquanto em telas maiores  deve ser centralizado com uma largura fixa.
+    
+    - Use o pseudo-elemento ::before para adicionar ícones decorativos antes dos campos "Nome de Usuário" e "Senha".
+    - Use o pseudo-elemento ::After para adicionar um efeito visual dos botões quando o mouse passar sobre eles(hover).
+
+    - Aplique bordas arredondadas aos campos e botões.
+    - Utilize sombras sutis para dar profundidade ao formulário.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova - Módulo 06</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <div class="formulario">
+        <form action="index.html">
+            
+            <!-- Usuário -->
+            <div class="usuario">
+                <label for="text" class="usuario">Usuário: </label>
+                <input type="text" id="nome" name="Nome de Usuário" placeholder="Usuário">
+            </div>
+            
+            <br>
+
+            <!-- Senha -->
+            <div class="senha">
+                <label for="password" class="senha"> Senha: </label>
+                <input type="password" id="senha" name="password" placeholder="Senha">
+            </div>
+            
+            <br> <br>
+
+            <!-- Botões -->
+            <div class="botoes">
+                <button class="enviar">Enviar</button>
+                <button class="limpar">Limpar</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
